@@ -1,0 +1,19 @@
+body {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: 'Montserrat', 'san-serif';
+    font-weight: 400;
+    color: #fff;
+    background-color: rgba(48, 44, 66, 1);
+
+    a {
+        color: inherit;
+    }
+
+}
+.container {
+    width: 1272px;
+}
