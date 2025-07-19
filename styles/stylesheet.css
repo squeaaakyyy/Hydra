@@ -1,0 +1,35 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font: "Montserrat", "san-serif";
+  color: #fff;
+  background-color: rgb(48, 44, 66);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
