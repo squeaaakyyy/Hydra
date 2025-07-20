@@ -57,7 +57,7 @@
         width: 348px;
         height: 48px;
 
-        li {
+        button {
             width: 155px;
             height: 100%;
             border-radius: 40px;
@@ -73,14 +73,14 @@
             }
         }
 
-        li:first-of-type {
+        button:first-of-type {
             color: #fff;
             border: 2px solid #fff;
-
+            background-color: rgba(48, 44, 66, 1);
             height: 44px;
             line-height: 44px;
         }
-        li:last-of-type {
+        button:last-of-type {
             color: rgba(52, 48, 69, 1);
             border: none;
             background-image: linear-gradient(to right, rgba(129, 118, 175, 1), rgba(192, 183, 232, 1));
