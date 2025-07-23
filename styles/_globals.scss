@@ -1,3 +1,27 @@
+$desktop-xl-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 390px;
+
+
+@mixin desktop-xl {
+  @media (min-width: $desktop-xl-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+
 body {
 
     display: flex;
@@ -15,5 +39,14 @@ body {
 
 }
 .container {
-    width: 1272px;
+    // width: 88.75%;
+
+    @include tablet {
+        width: 682px;
+    }
+    
+    @include desktop-xl {
+        width: 1278px;
+    }
+
 }

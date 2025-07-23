@@ -1,0 +1,96 @@
+.technologies {
+    margin-top: 114px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__title {
+        border-radius: 160px;
+
+        background-image: url("/imgs/pexels-rodnae-productions-8097332\ 1.png");
+        background-color: rgba(48, 44, 66, 0.79);
+        box-shadow: 0px 4px 4px 0px rgba(192, 183, 232, 0.01);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 303px;
+        width: 100%;
+
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+
+            margin-bottom: 11px;
+        }
+
+        h3 {
+            font-size: 36px;
+            font-weight: 300;
+        }
+    }
+
+    &__go-to {
+        position: relative;
+        top: -30px;
+        display: inline-block;
+        
+        width: 60px;
+        height: 60px;
+
+        box-shadow: 0 0 0px 15px rgba(14, 14, 14, 0.32);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+        
+        a {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    &__item-1 {
+        width: 174px;
+        height: 174px;
+    }
+
+    &__item-2 {
+        width: 252px;
+        height: 252px;
+    }
+
+    &__item-3 {
+        width: 263px;
+        height: 263px;
+    }
+
+    &__item-4 {
+        width: 282px;
+        height: 282px;
+    }
+}

@@ -1,0 +1,128 @@
+.footer {
+    margin-top: 127px;
+
+    &__information {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 204px;
+
+        padding-bottom: 80px;
+        margin-bottom: 50px;
+
+        border-bottom: 1px solid red;
+    }
+
+    &__logo {
+        filter: drop-shadow(0px 10px 6px 0px rgba(0, 0, 0, 0.25));
+
+        width: 185px;
+        height: 187px;
+
+    }
+
+
+
+    &__navigation {
+        height: 100%;
+
+        padding-left: 81px;
+        border-left: 6px solid #fff;
+    }
+    
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        height: 100%;
+    }
+
+    &__nav-item {
+        list-style-type: none;
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &__nav-item:not(:last-of-type) {
+        margin-bottom: 23px;
+    }
+
+
+
+    &__links {
+        height: 100%;
+
+        padding-left: 107px;
+        border-left: 6px solid #fff;
+    }
+
+    &__info-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        height: 100%;
+    }
+
+    &__link-info {
+        list-style-type: none;
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &__link-info:not(:last-of-type) {
+        margin-bottom: 23px;
+    }
+
+
+
+    &__social-media {
+        height: 100%;
+
+        padding-left: 71px;
+        border-left: 6px solid #fff;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 39px;
+        }
+    }
+
+    &__sm-links {
+        display: flex;
+        justify-content: space-between;
+
+        width: 313px;
+    }
+
+    &__sm-link {
+        list-style-type: none;
+    }
+
+    &__sm-build {
+        width: 214px;
+        height: 48px;
+
+        margin-top: 50px;
+
+        border-radius: 40px;
+        background-image: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(52, 48, 69, 1);
+
+    }
+
+    &__copyright {
+        text-align: center;
+
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 13%;
+    }
+}
