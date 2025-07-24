@@ -1,73 +1,45 @@
-const burgerButton = document.querySelector('.header__burger-button');
-const menu = document.querySelector('.header__burger-menu');
-
-burgerButton.addEventListener('click', () => {
-  burgerButton.classList.toggle('active');
-  menu.classList.toggle('active');
-});
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    let currentIndex = 0;
-
-    // Функция для показа текущего слайда
-    function showSlide(index) {
-        // Скрываем все слайды
-        sliderItems.forEach(item => {
-            item.classList.remove('active');
+    // Бургер-меню
+    const burgerButton = document.querySelector('.header__burger-button');
+    const menu = document.querySelector('.header__burger-menu');
+    
+    if (burgerButton && menu) {
+        burgerButton.addEventListener('click', () => {
+            burgerButton.classList.toggle('active');
+            menu.classList.toggle('active');
         });
-        
-        // Показываем текущий слайд
-        sliderItems[index].classList.add('active');
     }
 
-    // Обработчик для кнопки "назад"
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
-        showSlide(currentIndex);
-    });
+    // Универсальная функция для слайдеров
+    function initSlider(containerSelector) {
+        if (window.matchMedia("(max-width: 767px)").matches || !containerSelector.includes('stages') && !containerSelector.includes('contact')) {
+            const sliderItems = document.querySelectorAll(`${containerSelector} .slider-item, ${containerSelector} .contact__slider-item`);
+            const prevButton = document.querySelector(`${containerSelector} .prev-button`);
+            const nextButton = document.querySelector(`${containerSelector} .next-button`);
+            
+            if (!sliderItems.length || !prevButton || !nextButton) return;
+            
+            let currentIndex = 0;
 
-    // Обработчик для кнопки "вперед"
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % sliderItems.length;
-        showSlide(currentIndex);
-    });
+            const showSlide = (index) => {
+                sliderItems.forEach(item => item.classList.remove('active'));
+                sliderItems[index].classList.add('active');
+            };
 
-    // Показываем первый слайд при загрузке
-    showSlide(currentIndex);
-});
+            const navigate = (direction) => {
+                currentIndex = (currentIndex + direction + sliderItems.length) % sliderItems.length;
+                showSlide(currentIndex);
+            };
 
+            prevButton.addEventListener('click', () => navigate(-1));
+            nextButton.addEventListener('click', () => navigate(1));
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        const sliderItems = document.querySelectorAll('.stages .slider-item');
-        const prevButton = document.querySelector('.stages .prev-button');
-        const nextButton = document.querySelector('.stages .next-button');
-        let currentIndex = 0;
-
-        function showSlide(index) {
-            sliderItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            sliderItems[index].classList.add('active');
+            showSlide(currentIndex);
         }
-
-        prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
-            showSlide(currentIndex);
-        });
-
-        nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % sliderItems.length;
-            showSlide(currentIndex);
-        });
-
-        showSlide(currentIndex);
     }
+
+    // Инициализация всех слайдеров
+    initSlider('.technologies');
+    initSlider('.stages');
+    initSlider('.contact');
 });
