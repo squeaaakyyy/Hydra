@@ -1,6 +1,4 @@
 .join {
-    margin-top: 112px;
-    padding: 90px 0px;
 
     display: flex;
     flex-direction: column;
@@ -8,7 +6,27 @@
 
     background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 100px;
+
+    @include mobile {
+        margin-top: 81px;
+        padding: 45px 22px 65px 22px;
+
+        border-radius: 40px;
+    }
+
+    @include tablet {
+        margin-top: 82px;
+        padding: 50px 79px;
+
+        border-radius: 100px;
+    }
+
+    @include desktop-xl {
+        margin-top: 112px;
+        padding: 90px 109px;
+
+        border-radius: 100px;
+    }
 
     &__title {
         display: flex;
@@ -16,30 +34,56 @@
         align-items: center;
 
         h2 {
-            font-size: 36px;
             font-weight: 700;
-            width: 238px;
 
             display: inline-block;
+            text-align: center;
 
             padding: 0px 88px 30px 88px;
             margin-bottom: 21px;
             border-bottom: 1px solid red;
             // border-image: linear-gradient(270deg, #343045 0%, #C0B7E8 34.9%, #8176AF 68.75%, #343045 100%);
 
+            @include mobile {
+
+            }
+
+            @include tablet {
+                font-size: 24px;
+                width: 238px;
+            }
+
+            @include desktop-xl {
+                font-size: 36px;
+                width: 238px;
+            }
             
         }
 
         h3 {
-            font-size: 36px;
             font-weight: 300;
-            margin-bottom: 65px;
+            text-align: center;
+
+            @include mobile {
+                font-size: 24px;
+                margin-bottom: 36px;
+            }
+
+            @include tablet {
+                font-size: 24px;
+                margin-bottom: 35px;
+            }
+
+            @include desktop-xl {
+                font-size: 36px;
+                margin-bottom: 35px;
+            }
         }
     }
 
     fieldset {
 
-        width: 1058px;
+        // width: 1058px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,13 +105,20 @@
         background-color: rgba(0, 0, 0, 0);
         border: 2px solid #fff;
         border-radius: 40px;
-        padding: 27px 42px;
 
         font-size: 14px;
         font-weight: 400;
         color: #fff;
 
         margin-bottom: 39px;
+
+        @include mobile {
+            padding: 18px 29px;
+        }
+
+        @include tablet {
+            padding: 27px 42px;
+        }
     }
 
     &__input-field:focus {
@@ -75,7 +126,14 @@
     }
 
     &__input-field:not(:last-of-type) {
-        width: 436px;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 436px;
+        }
     }
     &__input-field:last-of-type {
         width: 100%;

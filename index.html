@@ -53,17 +53,39 @@
                     <li class="header__nav-item"><a href="#">HOW TO</a></li>
                 </ul>
                 
-                <ul class="header__contact">
+                <div class="header__contact">
                     <a href="#" class="header__contact-item"><button>CONTACT US</button></a>
                     <a href="#" class="header__contact-item"><button>JOIN HYDRA</button></a>
-                </ul>
+                </div>
+            </nav>
+
+            <nav class="header__navigation-mobile">
+                <button class="header__burger-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="header__burger-menu">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="#">ABOUT</a></li>
+                        <li class="header__nav-item"><a href="#">SERVICES</a></li>
+                        <li class="header__nav-item"><a href="#">TECHNOLOGIES</a></li>
+                        <li class="header__nav-item"><a href="#">HOW TO</a></li>
+                    </ul>
+                    
+                    <div class="header__contact">
+                        <a href="#" class="header__contact-item"><button>CONTACT US</button></a>
+                        <a href="#" class="header__contact-item"><button>JOIN HYDRA</button></a>
+                    </div>
+                </div>
             </nav>
         </header>
 
         <main>
             <section class="hero">
                 <div class="hero__description">
-                    <h1 class="hero__title"><span>Dive</span> Into The Depths Of <span>Virtual Reality</span></h1>
+                    <h1 class="hero__title"><span>Dive</span> Into The Depths<br>Of <span>Virtual Reality</span></h1>
                     <p class="hero__description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt ut labore et dolore 
                         nisl tincidunt eget. Lectus mauris eros in vitae.
@@ -175,12 +197,18 @@
 
                 <button class="technologies__go-to"><a href="#"><img src="imgs/down-arrow.svg" alt=""></a></button>
 
-                <ul class="technologies__list">
-                    <li class="technologies__item-1"><img src="imgs/Hydra-Tech1 1.svg" alt=""></li>
-                    <li class="technologies__item-2"><img src="imgs/Hydra-Tech3 1.svg" alt=""></li>
-                    <li class="technologies__item-3"><img src="imgs/Hydra-Tech2 1.svg" alt=""></li>
-                    <li class="technologies__item-4"><img src="imgs/Hydra-Tech4 1.svg" alt=""></li>
-                </ul>
+                <div class="slider-container">
+                    <button class="slider-button prev-button"></button>
+                    
+                    <ul class="technologies__list">
+                        <li class="technologies__item-1 slider-item active"><img src="imgs/Hydra-Tech1 1.svg" alt=""></li>
+                        <li class="technologies__item-2 slider-item"><img src="imgs/Hydra-Tech3 1.svg" alt=""></li>
+                        <li class="technologies__item-3 slider-item"><img src="imgs/Hydra-Tech2 1.svg" alt=""></li>
+                        <li class="technologies__item-4 slider-item"><img src="imgs/Hydra-Tech4 1.svg" alt=""></li>
+                    </ul>
+                    
+                    <button class="slider-button next-button"></button>
+                </div>
             </section>
 
             <section class="how-we-build">
@@ -203,43 +231,45 @@
             </section>
 
             <section class="stages">
-                <ul class="stages__list">
-                    <li class="stages__list-item">
-                        <div class="stages__point"><span>01</span></div>
+                <div class="stages__slider-container">
+                    <button class="stages__slider-button prev-button">&larr;</button>
+                    
+                    <ul class="stages__list">
+                        <li class="stages__list-item slider-item">
+                            <div class="stages__point"><span>01</span></div>
+                            <div class="stages__point-title">
+                                <img src="imgs/shape1.svg" alt="">
+                                <h4>3D Conception<br>& Design</h4>
+                            </div>
+                        </li>
 
-                        <div class="stages__point-title">
-                            <img src="imgs/shape1.svg" alt="">
-                            <h4>3D Conception<br>& Design</h4>
-                        </div>
-                    </li>
+                        <li class="stages__list-item slider-item">
+                            <span class="stages__point"><span>02</span></span>
+                            <div class="stages__point-title">
+                                <img src="imgs/shape1.svg" alt="">
+                                <h4>Interaction<br>Design</h4>
+                            </div>
+                        </li>
 
-                    <li class="stages__list-item">
-                        <span class="stages__point"><span>02</span></span>
+                        <li class="stages__list-item slider-item">
+                            <span class="stages__point"><span>03</span></span>
+                            <div class="stages__point-title">
+                                <img src="imgs/shape1.svg" alt="">
+                                <h4>VR World<br>User Testing</h4>
+                            </div>
+                        </li>
 
-                        <div class="stages__point-title">
-                            <img src="imgs/shape1.svg" alt="">
-                            <h4>Interaction<br>Design</h4>
-                        </div>
-                    </li>
-
-                    <li class="stages__list-item">
-                        <span class="stages__point"><span>03</span></span>
-
-                        <div class="stages__point-title">
-                            <img src="imgs/shape1.svg" alt="">
-                            <h4>VR World<br>User Testing</h4>
-                        </div>
-                    </li>
-
-                    <li class="stages__list-item">
-                        <span class="stages__point"><span>04</span></span>
-
-                        <div class="stages__point-title">
-                            <img src="imgs/shape1.svg" alt="">
-                            <h4>Hydra VR<br>Deploy</h4>
-                        </div>
-                    </li>
-                </ul>
+                        <li class="stages__list-item slider-item">
+                            <span class="stages__point"><span>04</span></span>
+                            <div class="stages__point-title">
+                                <img src="imgs/shape1.svg" alt="">
+                                <h4>Hydra VR<br>Deploy</h4>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <button class="stages__slider-button next-button">&rarr;</button>
+                </div>
             </section>
 
             <section class="join">
@@ -305,9 +335,11 @@
 
             <div class="footer__copyright">
                 <h3>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </h3>
-                <h3>2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED </h3>
+                <h3>2023 © HYDRA LANDING PAGE<br>BY ZINE. E. FALOUTI<br>ALL RIGHTS RESERVED </h3>
             </div>
         </footer>
     </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>

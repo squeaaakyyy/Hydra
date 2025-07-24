@@ -1,58 +1,183 @@
 .stages {
     margin-top: 120px;
+    position: relative;
+
+    // Контейнер слайдера
+    &__slider-container {
+        @include mobile {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            padding: 0 40px; // Оставляем место для кнопок
+        }
+
+        @include tablet {
+            display: block;
+            padding: 0;
+        }
+    }
 
     &__list {
         display: flex;
-        justify-content: space-between;
+        
+        @include mobile {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
 
+        @include tablet {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    }
+
+    // Элементы слайдера
+    .slider-item {
+        @include mobile {
+            flex: 0 0 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px;
+            box-sizing: border-box;
+            
+            &.active {
+                display: flex;
+            }
+        }
+
+        @include tablet {
+            display: flex !important;
+            flex: none;
+            width: 25%;
+        }
+
+        @include desktop-xl {
+            width: auto;
+        }
+    }
+
+    // Кнопки слайдера
+    &__slider-button {
+        @include mobile {
+            background: linear-gradient(251.27deg, #C0B7E8 12.87%, #8176AF 89.33%);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &.prev-button {
+                left: 0;
+            }
+
+            &.next-button {
+                right: 0;
+            }
+        }
+
+        @include tablet {
+            display: none !important;
+        }
     }
 
     &__list-item {
         list-style-type: none;
-
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        list-style-type: none;
+        @include tablet {
+            width: 25%;
+        }
+
+        @include desktop-xl {
+            width: auto;
+        }
     }
 
     &__point {
-        font-size: 64px;
         font-weight: 700;
         color: rgba(52, 48, 69, 1);
-
-        width: 159px;
-        height: 159px;
-
         border-radius: 50%;
         box-shadow: 0 0 0 19px rgba(13, 13, 13, 0.32);
         background: linear-gradient(251.27deg, #C0B7E8 12.87%, #8176AF 89.33%);
-
-
         display: flex;
         justify-content: center;
         align-items: center;
 
-        margin-bottom: 45px;
+        @include tablet {
+            font-size: 48px;
+            width: 109px;
+            height: 109px;
+            margin-bottom: 45px;
+        }
+
+        @include desktop-xl {
+            font-size: 64px;
+            width: 159px;
+            height: 159px;
+            margin-bottom: 45px;
+        }
     }
 
     &__point-title {
         display: flex;
         justify-content: start;
         align-items: start;
+        text-align: center;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            
+            img {
+                margin-bottom: 10px;
+            }
+        }
 
         img {
-            margin-right: 15px;
+            @include tablet {
+                margin-right: 5px;
+            }
+
+            @include desktop-xl {
+                margin-right: 15px;
+            }
         }
 
         h4 {
-            font-size: 24px;
             font-weight: 700;
 
-            line-height: 150%;
+            @include tablet {
+                font-size: 18px;
+                line-height: 150%;
+            }
+
+            @include desktop-xl {
+                font-size: 24px;
+                line-height: 150%;
+            }
         }
     }
-
-
 }

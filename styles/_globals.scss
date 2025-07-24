@@ -39,14 +39,18 @@ body {
 
 }
 .container {
-    // width: 88.75%;
+  // width: 88.75%;
 
-    @include tablet {
-        width: 682px;
-    }
-    
-    @include desktop-xl {
-        width: 1278px;
-    }
+  @include mobile {
+    width: 350px;
+  }
+
+  @include tablet {
+      width: 682px;
+  }
+  
+  @include desktop-xl {
+    width: 1278px;
+  }
 
 }
